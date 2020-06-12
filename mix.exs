@@ -23,16 +23,20 @@ defmodule Eth.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps() do
     [
-      {:ethereumex, "~> 0.6.0"},
+      {:ethereumex, "~> 0.6.2"},
       {:ex_rlp, "~> 0.5.3"},
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:dialyxir, "~> 1.0.0", only: [:dev], runtime: false},
       {:hexate, "~> 0.6.1"},
-      {:keccakf1600, "~> 2.0", hex: :keccakf1600_orig},
-      {:mnemonic, "~> 0.2.1"},
+      {:keccakf1600, "~> 3.0"},
+      {:mnemonic, "~> 0.2.2"},
       {:poison, "~> 4.0.1"},
       {:libsecp256k1, "~> 0.1.10"},
-      {:telemetry, "~> 0.4"}
+      {:telemetry, "~> 0.4"},
+      {:mix_erlang_tasks,
+       git: "https://github.com/fortelabsinc/mix-erlang-tasks.git",
+       branch: "master",
+       override: true}
     ]
   end
 
